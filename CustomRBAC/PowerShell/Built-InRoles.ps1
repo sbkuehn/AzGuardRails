@@ -1,0 +1,1 @@
+﻿Get-AzureRmRoleDefinition | Select-Object Name, Description

@@ -1,0 +1,1 @@
+﻿New-AzureRmRoleDefinition -InputFile C:\Users\flore\Desktop\CustomRole.json

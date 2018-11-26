@@ -1,0 +1,1 @@
+﻿Get-AzureRmRoleDefinition -Name "Network Contributor" | ConvertTo-Json | Out-File "C:\Demos\CustomRBAC\NetworkContributor.json"
