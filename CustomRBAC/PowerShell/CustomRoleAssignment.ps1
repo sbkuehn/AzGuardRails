@@ -1,5 +1,5 @@
 ﻿# Retrieve the role definition for the "Virtual Machine Contributor" built-in role
-$role = Get-AzureRmRoleDefinition "Virtual Machine Contributor"
+$role = Get-AzRoleDefinition "Virtual Machine Contributor"
 # Set the role Id to null as this will be automatically generated when creating a custom role
 $role.Id = $null
 # Give the role a name and description
@@ -26,4 +26,4 @@ $role.AssignableScopes.Clear()
 # Apply it to a specific resource group, note you would need to replace  with the actual subscription id
 $role.AssignableScopes.Add("/subscriptions/subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx/resourceGroups/MyResourceGroup")
 
-New-AzureRmRoleDefinition -Role $role
+New-AzRoleDefinition -Role $role
