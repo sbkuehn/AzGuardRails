@@ -6,7 +6,7 @@ $ADGroupSearch = Get-AzureRmADGroup -SearchString $ADGroup
 
 $scope = ""
 
-$role = Get-AzureRmRoleDefinition "Reader" 
+$role = Get-AzRoleDefinition "Reader" 
 $role.id = $null
 $role.name = "CloudOps Lead"
 $role.Description = "Cloud Engineering Lead"
