@@ -1,11 +1,11 @@
 ﻿$ADGroup = "NetworkAdmins"
-$ADGroupSearch = Get-AzureRmADGroup -SearchString $ADGroup
+$ADGroupSearch = Get-AzADGroup -SearchString $ADGroup
 
 #subscription ID in form of "subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx" : Can only add one subscription in this form
 
 $scope = ""
 
-$role = Get-AzureRmRoleDefinition "Reader" 
+$role = Get-AzRoleDefinition "Reader" 
 $role.id = $null
 $role.name = "NetworkingTest"
 $role.Description = "Networking Role"
@@ -20,6 +20,6 @@ $role.Actions.Add("Microsoft.resources/deployments/*")
 $role.AssignableScopes.Clear()
 $role.AssignableScopes.Add($scope)
 
-New-AzureRmRoleDefinition -Role $role 
+New-AzRoleDefinition -Role $role 
 
-New-AzureRmRoleAssignment -ObjectId $ADGroupSearch.Id.Guid -RoleDefinitionName $role.name -Scope $scope
+New-AzRoleAssignment -ObjectId $ADGroupSearch.Id.Guid -RoleDefinitionName $role.name -Scope $scope
