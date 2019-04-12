@@ -1,7 +1,8 @@
 ﻿$ADGroup = "Business Analysts"
 $ADGroupSearch = Get-AzADGroup -SearchString $ADGroup
 
-#subscription ID in form of "subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx" : Can only add one subscription in this form
+#Scope should be subscription ID in form of "subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx" : 
+#Can only add one subscription in this form
 
 $scope = ""
 
