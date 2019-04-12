@@ -8,7 +8,7 @@ $scope = ""
 $role = Get-AzureRmRoleDefinition "Reader" 
 $role.id = $null
 $role.name = "CloudOps Lead"
-$role.Description = "I'm Testing this"
+$role.Description = "Cloud Engineering Lead"
 $role.Actions.Clear()
 $role.NotActions.Clear()
 $role.Actions.Add("*")
