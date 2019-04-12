@@ -1,7 +1,8 @@
 ﻿$ADGroup = "Digital Security"
-$ADGroupSearch = Get-AzureRmADGroup -SearchString $ADGroup
+$ADGroupSearch = Get-AzADGroup -SearchString $ADGroup
 
-#subscription ID in form of "subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx" : Can only add one subscription in this form
+#Scope should be subscription ID in form of "subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx" : 
+#Can only add one subscription in this form
 
 $scope = ""
 
@@ -19,6 +20,6 @@ $role.Actions.Add("Microsoft.EventHub/namespaces/eventhubs/*")
 $role.AssignableScopes.Clear()
 $role.AssignableScopes.Add($scope)
 
-New-AzureRmRoleDefinition -Role $role 
+New-AzRoleDefinition -Role $role 
 
-New-AzureRmRoleAssignment -ObjectId $ADGroupSearch.Id.Guid -RoleDefinitionName $role.name -Scope $scope
+New-AzRoleAssignment -ObjectId $ADGroupSearch.Id.Guid -RoleDefinitionName $role.name -Scope $scope
