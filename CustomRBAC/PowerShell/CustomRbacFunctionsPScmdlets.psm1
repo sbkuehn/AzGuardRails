@@ -9,8 +9,8 @@ Function Get-AzAll {
     Get-AzProviderOperation -OperationSearchString * | Select Operation,OperationName,ProviderNamespace,Description | Export-Csv -Path "$filePath $fileName" -nti
     }
 
-##Custom-RbacAssignment
-##Assigns a custom role based upon
+#Custom-RbacAssignment
+#Assigns a custom role based upon
 Function Custom-RbacAssignment {
     [CmdletBinding()]
     Param([Parameter(Mandatory=$true)]
