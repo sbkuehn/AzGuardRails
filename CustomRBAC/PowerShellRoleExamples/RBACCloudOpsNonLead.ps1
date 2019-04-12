@@ -9,7 +9,7 @@ $scope = ""
 $role = Get-AzRoleDefinition "Reader" 
 $role.id = $null
 $role.name = "CloudOps Non-Lead"
-$role.Description = "I'm Testing this"
+$role.Description = "Cloud Administrators"
 $role.Actions.Clear()
 $role.NotActions.Clear()
 $role.Actions.Add("Microsoft.Resources/subscriptions/resourceGroups/write")
