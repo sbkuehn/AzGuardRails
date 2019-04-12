@@ -1,5 +1,5 @@
 ﻿$ADGroup = "Business Analysts"
-$ADGroupSearch = Get-AzureRmADGroup -SearchString $ADGroup
+$ADGroupSearch = Get-AzADGroup -SearchString $ADGroup
 
 #subscription ID in form of "subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx" : Can only add one subscription in this form
 
@@ -24,6 +24,6 @@ $role.Actions.Add("Microsoft.Sql/*/read")
 $role.AssignableScopes.Clear()
 $role.AssignableScopes.Add($scope)
 
-New-AzureRmRoleDefinition -Role $role 
+New-AzRoleDefinition -Role $role 
 
-New-AzureRmRoleAssignment -ObjectId $ADGroupSearch.Id.Guid -RoleDefinitionName $role.name -Scope $scope
+New-AzRoleAssignment -ObjectId $ADGroupSearch.Id.Guid -RoleDefinitionName $role.name -Scope $scope
