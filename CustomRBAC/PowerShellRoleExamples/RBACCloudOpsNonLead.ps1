@@ -8,7 +8,7 @@ $scope = ""
 
 $role = Get-AzRoleDefinition "Reader" 
 $role.id = $null
-$role.name = "CloudOps Non-Lead"
+$role.name = "CloudOps Administrators"
 $role.Description = "Cloud Administrators"
 $role.Actions.Clear()
 $role.NotActions.Clear()
