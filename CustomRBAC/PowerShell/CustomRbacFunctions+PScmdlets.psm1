@@ -1,12 +1,12 @@
-﻿##Get-AzResProvAll
-##Gets all AzureRM Resource Provider Operations and exports to a CSV
-##Note: Put the \ at the end of the filePath: c:\users\user1\
-Function Get-ResProvAll {
+#Get-AzAll
+#Gets all AzureRM Resource Provider Operations and exports to a CSV
+#Note: Put the \ at the end of the filePath: c:\users\user1\
+Function Get-AzAll {
     Param([Parameter(Position=0,Mandatory=$true)]
     [string]$filePath,
     [Parameter(Position=1,Mandatory=$true)]
     [string]$fileName)
-    Get-AzureRmProviderOperation -OperationSearchString * | Select Operation,OperationName,ProviderNamespace,Description | Export-Csv -Path "$filePath $fileName" -nti
+    Get-AzProviderOperation -OperationSearchString * | Select Operation,OperationName,ProviderNamespace,Description | Export-Csv -Path "$filePath $fileName" -nti
     }
 
 ##Custom-RbacAssignment
@@ -24,7 +24,7 @@ Function Custom-RbacAssignment {
     [Parameter(Mandatory=$true)]
     [string]$ADGroup)
 
-    $role = Get-AzureRmRoleDefinition "Virtual Machine Contributor"
+    $role = Get-AzRoleDefinition "Virtual Machine Contributor"
     $role.Name = $newRoleName
     $role.Id = $null
     $role.Description = $roleDescription
@@ -43,7 +43,7 @@ Function Custom-RbacAssignment {
     $role.AssignableScopes.Clear()
     $role.AssignableScopes.Add($subOrRG)
  
-    New-AzureRmRoleAssignment -RoleDefinitionName $role.name -Scope $subOrResGrp
+    New-AzRoleAssignment -RoleDefinitionName $role.name -Scope $subOrResGrp
 }
  
 
