@@ -6,7 +6,7 @@ $ADGroupSearch = Get-AzADGroup -SearchString $ADGroup
 
 $scope = ""
 
-$role = Get-AzureRmRoleDefinition "Reader" 
+$role = Get-AzRoleDefinition "Reader" 
 $role.id = $null
 $role.name = "Digital Security"
 $role.Description = "Digital Security Role"
