@@ -1,6 +1,6 @@
 ﻿# Exports a list of all Azure Provider Operations to a CSV file.
 Get-AzureRmProviderOperation -OperationSearchString * | Select Operation,OperationName,ProviderNamespace,Description `
-| Export-Csv c:\Demos\CustomRBAC\resourceprovideractions.csv -nti
+| Export-Csv c:\Scripts\CustomRBAC\resourceprovideractions.csv -nti
 
 # Working examples to drill deeper into specific provider namespaces.
 Get-AzResourceProvider | Select ProviderNameSpace | Export-Csv C:\Scripts\CustomRBAC\ResourceProviders.csv -nti
