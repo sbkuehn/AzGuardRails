@@ -27,5 +27,3 @@ $role.AssignableScopes.Clear()
 $role.AssignableScopes.Add("/subscriptions/subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx/resourceGroups/MyResourceGroup")
 
 New-AzRoleDefinition -Role $role
-
-adding
