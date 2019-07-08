@@ -1,7 +1,6 @@
 # AzGuardRails
 
-Azure Policy &
-PowerShell Examples of guard rails for Azure environments.
+Azure Policy, PowerShell, and JSON Examples of guard rails for Azure environments.
 
 © 2019 Microsoft Corporation. 
 All rights reserved. Sample scripts/code provided herein are not supported under any Microsoft standard support program 
