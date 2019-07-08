@@ -1,7 +1,7 @@
 ﻿$ADGroup = "Engineering"
 $ADGroupSearch = Get-AzureRmADGroup -SearchString $ADGroup
 
-#Scope should be subscription ID in form of "subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx" : 
+#Scope should be subscription ID in the form of "subscriptions/xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx" : 
 #Can only add one subscription in this form
 
 $scope = ""
