@@ -1,5 +1,5 @@
 #Get-AzAll
-#Gets all AzureRM Resource Provider Operations and exports to a CSV
+#Gets all Azure Resource Provider Operations and exports to a CSV
 #Note: Put the \ at the end of the filePath: c:\users\user1\
 Function Get-AzAll {
     Param([Parameter(Position=0,Mandatory=$true)]
