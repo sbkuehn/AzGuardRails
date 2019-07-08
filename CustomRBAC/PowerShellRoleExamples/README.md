@@ -1,2 +1,2 @@
 # PowerShell Role Examples:
-These provide a role template to use for custom RBAC assignments in Azure.
+These provide role PoSH templates to use for custom RBAC assignments in Azure.
